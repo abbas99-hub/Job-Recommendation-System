@@ -2,4 +2,9 @@ pandas
 numpy 
 seaborn
 matplotlib
+selenium
+tqdm
+bs4
+regex
+docx
 -e .
