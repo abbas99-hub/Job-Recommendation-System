@@ -1,6 +1,7 @@
 import spacy
 from spacy.matcher import Matcher
 import PyPDF2
+import os
 
 # Load the Spacy English model
 nlp = spacy.load('en_core_web_sm')
@@ -9,7 +10,8 @@ from spacy.matcher import Matcher
 import csv
 
 # Read skills from CSV file
-with open('skills.csv', 'r') as file:
+file_path=r'C:\Users\Admin\ML_Projects\Job_Recommendation_System\Job-Recommendation-System\src\data\skills.csv'
+with open(file_path, 'r') as file:
     csv_reader = csv.reader(file)
     skills = [row for row in csv_reader]
 
@@ -43,11 +45,10 @@ def extract_text_from_pdf(file_path:str):
     return text
 
 def skills_extractor(file_path):
-        # Path to the resume PDF file
-        resume_file = file_path
-
         # Extract text from PDF
-        resume_text = extract_text_from_pdf(resume_file)
+        path=r'C:\Users\Admin\ML_Projects\Job_Recommendation_System\Job-Recommendation-System\src\notebook'
+        full_file_path = os.path.join(path, file_path)
+        resume_text = extract_text_from_pdf(full_file_path)
 
         # Extract skills from resume text
         skills = list(extract_skills(resume_text))
