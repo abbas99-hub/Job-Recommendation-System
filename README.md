@@ -1,5 +1,5 @@
 # Job Recommendation System using Machine Learning
-This repository contains the code and instructions to build a job recommendation system using machine learning. The system is designed to provide personalized job recommendations based on user preferences and historical job data. The data for this project is scraped from Glassdoor, and the system is deployed using the Azure cloud platform.
+This repository contains the code and instructions to build a job recommendation system using machine learning. The system is designed to provide personalized job recommendations based on user preferences and historical job data. The data for this project is scraped from Glassdoor, and the system is deployed using the AWS cloud platform.
 
 ## Business Understanding
 The goal of this project is to develop a job recommendation system that helps users find relevant job opportunities based on their preferences and historical data. By leveraging machine learning techniques, we aim to provide personalized recommendations that align with the user's skills, interests, and career goals. The system will take into account various factors such as job title, salary estimate, company rating, location, industry, and more to generate accurate recommendations.
@@ -39,15 +39,15 @@ Hybrid Approaches: Combine collaborative filtering and content-based techniques 
 ## Model Evaluation
 After training the model, we will evaluate its performance using suitable evaluation metrics such as precision, recall, and accuracy. This step will help us assess how well the model predicts job recommendations and identify areas for improvement.
 
-## Model Deployment using Azure Cloud
-To make the job recommendation system accessible to users, we will deploy the model on the Azure cloud platform. The deployment process involves the following steps:
+## Model Deployment using AWS Cloud
+To make the job recommendation system accessible to users, we will deploy the model on the AWS cloud platform. The deployment process involves the following steps:
 
-* Model Serialization: Serialize the trained model to a format compatible with the Azure cloud deployment.
+* Model Serialization: Serialize the trained model to a format compatible with the AWS cloud deployment.
 * Model Containerization: Package the serialized model along with the necessary dependencies and environment specifications into a container using tools like Docker.
-* Azure Container Registry: Create a container registry on Azure to store the model container and related artifacts securely.
-* Azure Kubernetes Service (AKS): Deploy the model container as a scalable microservice using AKS, which provides orchestration and management capabilities.
+* Amazon Elastic Container Registry (ECR): Create a container registry on AWS ECR to store the model container and related artifacts securely.
+* Amazon Elastic Kubernetes Service (EKS): Deploy the model container as a scalable microservice using EKS, which provides orchestration and management capabilities.
 * API Development: Develop an API that allows users to interact with the deployed model and request personalized job recommendations.
-Integration and Testing: Integrate the API with other components of the job recommendation system, and perform thorough testing to ensure its functionality and performance.
+* Integration and Testing: Integrate the API with other components of the job recommendation system, and perform thorough testing to ensure its functionality and performance.
 * Deployment Monitoring: Monitor the deployed model and API to track usage, performance metrics, and address any potential issues or errors.
 
 ## Usage
@@ -60,8 +60,8 @@ To use the job recommendation system, follow the instructions below:
 * Train the job recommendation model: python train_model.py
 * Evaluate the model performance: python evaluate_model.py
 * Serialize and containerize the trained model: python serialize_model.py and docker build -t job-recommendation .
-* Create an Azure Container Registry and push the container: az acr create --name job-recommendation-registry and docker push job-recommendation-registry.azurecr.io/job-recommendation
-* Deploy the model on Azure Kubernetes Service (AKS): az aks create --resource-group job-recommendation-group --name job-recommendation-aks --node-count 2 and kubectl apply -f deployment.yaml
+* Create an AWS Elastic Container Registry and push the container: Follow the AWS ECR documentation to create a registry and push the container image.
+* Deploy the model on AWS Elastic Kubernetes Service: Follow the AWS EKS documentation to create a Kubernetes cluster and deploy the containerized model.
 * Access the deployed job recommendation API and make requests to receive personalized recommendations.
 
 #### Please feel free to contribute to this project by submitting pull requests or opening issues.
