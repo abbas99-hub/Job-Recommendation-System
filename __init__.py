@@ -57,7 +57,7 @@ def main():
 
         # Display recommended jobs as DataFrame
         st.write("Recommended Jobs:")
-        st.dataframe(df_jobs)
+        st.dataframe(df_jobs[['Job Title','Company Name','Location','Industry','Sector','Average Salary']])
 
 # Run the Streamlit app
 if __name__ == '__main__':
