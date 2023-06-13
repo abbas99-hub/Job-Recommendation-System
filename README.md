@@ -1,4 +1,4 @@
-![jrs](https://github.com/abbas99-hub/Job-Recommendation-System/assets/60792939/5f4fd2fa-ea3d-40f6-a288-a203a481fd5f)
+![jsr2](https://github.com/abbas99-hub/Job-Recommendation-System/assets/60792939/ffa4a634-42d7-491e-89f8-07a137322876)
 
 # Job Recommendation System using Machine Learning
 This repository contains the code and instructions to build a job recommendation system using machine learning. The system is designed to provide personalized job recommendations based on user preferences and historical job data. The data for this project is scraped from Glassdoor, and the system is deployed using the Azure cloud platform.
