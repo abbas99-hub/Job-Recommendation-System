@@ -31,15 +31,13 @@ Handling Missing Data: Deal with missing values in the dataset by either imputin
 Encoding Categorical Variables: Convert categorical variables such as job title, location, industry, and sector into numerical representations using techniques like one-hot encoding or label encoding.
 Feature Scaling: Normalize numerical features, such as salary estimate and company rating, to ensure they have a similar scale and prevent dominance of certain features in the model.
 
-## Model Training
-We will train a machine learning model using the preprocessed data to generate job recommendations. The specific model architecture and algorithms used will depend on the nature of the recommendation problem. Some potential models that can be explored include:
+## Machine Learning Techniques:
+To provide personalized job recommendations, we employ the TF-IDF (Term Frequency-Inverse Document Frequency) vectorization technique. The "job_recommender.py" component plays a crucial role in this process. It utilizes the TF-IDF vectorizer from the scikit-learn library to transform job descriptions and user preferences into numerical feature vectors. These vectors capture the importance of each word in the documents, enabling the system to find similar job opportunities based on user preferences. The Nearest Neighbors algorithm is then used to identify the most relevant job recommendations.
 
-Collaborative Filtering: Build a recommendation model based on user-item interactions and similarities.
-Content-Based Filtering: Develop a model that recommends jobs based on the features and characteristics of the job listings.
-Hybrid Approaches: Combine collaborative filtering and content-based techniques to leverage the strengths of both approaches.
+skill extractor segment provides functions and utilities to extract skills from a PDF file using the Spacy library and perform text processing and matching operations. These extracted skills can be used for further analysis and processing in the job recommendation system.
 
-## Model Evaluation
-After training the model, we will evaluate its performance using suitable evaluation metrics such as precision, recall, and accuracy. This step will help us assess how well the model predicts job recommendations and identify areas for improvement.
+## Streamlit Application
+To make the job recommendation system easily accessible and user-friendly, we have developed a Streamlit application. Streamlit provides an intuitive web interface where users can upload their resumes. The application processes the user input, applies the machine learning models, and displays the top-recommended jobs based on the user's preferences and historical data.
 
 ## Model Deployment using Azure Cloud
 To make the job recommendation system accessible to users, we will deploy the model on the Azure cloud platform. The deployment process involves the following steps:
@@ -50,7 +48,7 @@ To make the job recommendation system accessible to users, we will deploy the mo
 * Azure Kubernetes Service (AKS): Deploy the model container as a scalable microservice using AKS, which provides orchestration and management capabilities.
 * API Development: Develop an API that allows users to interact with the deployed model and request personalized job recommendations.
 * Integration and Testing: Integrate the API with other components of the job recommendation system, and perform thorough testing to ensure its functionality and performance.
-* Deployment Monitoring: Monitor the deployed model and API to track usage, performance metrics, and address any potential issues or errors.
+* Deployment Monitoring: Monitor the deployed model and API to track usage, and performance metrics, and address any potential issues or errors.
 
 ## Usage
 To use the job recommendation system, follow the instructions below:
